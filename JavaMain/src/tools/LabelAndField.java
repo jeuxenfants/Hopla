@@ -6,6 +6,8 @@
 package tools;
 
 import java.awt.BorderLayout;
+import java.awt.event.FocusListener;
+import java.awt.event.FocusEvent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -17,6 +19,7 @@ import javax.swing.JTextField;
 public class LabelAndField extends JPanel {
 
     JLabel label = new JLabel();
+    String reponseSaisie;
     private JTextField answerField = new JTextField();
 
     public LabelAndField(String label, int size) {
@@ -25,6 +28,18 @@ public class LabelAndField extends JPanel {
         this.setLayout(new BorderLayout());
         this.add(this.label, BorderLayout.WEST);
         this.add(this.answerField, BorderLayout.EAST);
+        answerField.addFocusListener(new FocusListener(){
+        @Override
+        public void focusGained(FocusEvent e){
+            System.out.println("");
+        }
+        @Override
+        public void focusLost(FocusEvent e){
+            reponseSaisie= answerField.getText();
+            System.out.println(reponseSaisie);
+            
+        }
+    });
     }
 
     public JTextField getTextField() {

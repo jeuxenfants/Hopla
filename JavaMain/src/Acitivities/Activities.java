@@ -18,6 +18,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import quiz.Quiz;
 
 /**
  *
@@ -99,6 +100,7 @@ public class Activities extends JFrame {
             if ("culture".equals(s)) {//Comparaison du texte suivant avec le texte du bouton pour déclencher une action si c'est le même texte
                 JOptionPane.showMessageDialog(null, "Let's go for some questions about " + s);//Pop up pour le choix de l'activité
                 setVisible(false);//Rendre la fentre invisible 
+                Quiz quiz = new Quiz();
 
             }
             if ("retour".equals(s)) {//Comparaison du texte suivant avec le texte du bouton pour déclencher une action si c'est le même texte

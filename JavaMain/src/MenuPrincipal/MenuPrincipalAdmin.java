@@ -101,9 +101,9 @@ public class MenuPrincipalAdmin extends MenuPrincipal{
                 setVisible(false);//rend la fenetre active invisible 
                 ActivitiesAdmin test = new ActivitiesAdmin();
             }
-          if("Administration".equals(s)){
+            if("Administration".equals(s)){
                 setVisible(false);
-                Admin test = new Admin();
+                Admin test = new Admin();}
             if("Normal".equals(s))//Comparaison du texte suivant avec le texte du bouton pour déclencher une action si c'est le même texte
             {
                 setVisible(false);//rend la fenetre active invisible 
@@ -114,4 +114,4 @@ public class MenuPrincipalAdmin extends MenuPrincipal{
         }
     }
 }
-}
+
