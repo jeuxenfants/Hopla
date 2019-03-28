@@ -9,6 +9,7 @@ package MenuPrincipal;
 import MenuPrincipal.MenuPrincipal;
 import Level.LevelAdmin;
 import Acitivities.ActivitiesAdmin;
+import Administration.Admin;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
@@ -100,16 +101,17 @@ public class MenuPrincipalAdmin extends MenuPrincipal{
                 setVisible(false);//rend la fenetre active invisible 
                 ActivitiesAdmin test = new ActivitiesAdmin();
             }
-//            if("Administration".equals(s)){
-//                setVisible(false);
-//                Administration test = new Administration();
-//            }
+          if("Administration".equals(s)){
+                setVisible(false);
+                Admin test = new Admin();
             if("Normal".equals(s))//Comparaison du texte suivant avec le texte du bouton pour déclencher une action si c'est le même texte
             {
                 setVisible(false);//rend la fenetre active invisible 
-                MenuPrincipal test = new MenuPrincipal();//retour a la création d'un menu principal normal 
+                MenuPrincipal test1 = new MenuPrincipal();
+//retour a la création d'un menu principal normal 
             }
 
         }
     }
+}
 }

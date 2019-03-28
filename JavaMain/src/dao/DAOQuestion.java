@@ -49,7 +49,7 @@ public class DAOQuestion implements DAO<Question> {
         // requete SQL : Attention aux espaces !
         String sql = "INSERT INTO "
                + table
-               + " (question,answer) "
+               + " (question,answer,level) "
                + " VALUES (?,?,?) ";
         
         try {
@@ -92,7 +92,7 @@ public class DAOQuestion implements DAO<Question> {
         Question retObj = null;
         String sql= " UPDATE " + table + " SET question=?, " 
                 +" answer=?,"
-                +" level=?, "
+                +" level=? "
                 +" WHERE id_question=? ";
         
         try {

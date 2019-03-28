@@ -15,6 +15,16 @@ public class Question {
     private String question;
     private String answer;
 
+    public Question() {
+    }
+
+    public Question(String nouvelleQuestion, String reponse, int i) {
+       this.question = nouvelleQuestion;
+       this.answer = reponse;
+       this.level = i;
+       
+    }
+
     public Integer getLevel() {
         return level;
     }
